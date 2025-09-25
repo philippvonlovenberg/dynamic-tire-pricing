@@ -1,4 +1,7 @@
 # coding: utf8
+
+from config import GRAPHHOPPER_API_KEY
+
 import requests
 import json
 import math
@@ -239,7 +242,7 @@ def give_coordinate_for_location(location):
     ################################################################################################################
 
     parameters = {
-        "key": "2dad0eb2-b298-4a0b-883d-9a36331103f6",
+        "key": GRAPHHOPPER_API_KEY,
         "q": str(location),
         "locale": "en",
         "limit": "1"
@@ -301,7 +304,7 @@ def find_path(start: Coordinate, destination: Coordinate, maximum_point_distance
     endpoint = "{}, {}".format(destination.get_coordinates()[0], destination.get_coordinates()[1])
 
     parameters = {
-        "key": "2dad0eb2-b298-4a0b-883d-9a36331103f6",
+        "key": GRAPHHOPPER_API_KEY,
         "type": "json",
         "vehicle": "car",
         "points_encoded": "false",
