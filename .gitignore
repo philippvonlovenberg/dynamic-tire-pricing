@@ -1,2 +1,4 @@
 internal/database_srs.csv
 .DS_Store
+.idea/
+internal/.DS_Store
